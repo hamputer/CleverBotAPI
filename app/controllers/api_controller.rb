@@ -54,11 +54,11 @@ class CleverBot
   end
 
   def set_session_id id
-    @post_params['sessionid'] = id
+    @post_params[:sessionid] = id
   end
 
   def get_session_id
-    @post_params['sessionid']
+    @post_params[:sessionid]
   end
 
   private
@@ -70,7 +70,6 @@ class CleverBot
 
   def make_request
     query_string = build_query
-    p build_query
     result = @http.post @service_uri.path, query_string
     return result.body.split "\r"
   end
