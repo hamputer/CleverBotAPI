@@ -43,3 +43,5 @@ end
 # gem 'debugger', group: [:development, :test]
 gem 'cleverbot-api'
 ruby '1.9.3'
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+gem 'therubyracer', platforms: :ruby
